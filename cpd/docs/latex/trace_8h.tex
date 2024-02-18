@@ -1,0 +1,68 @@
+\doxysection{include/trace.h File Reference}
+\hypertarget{trace_8h}{}\label{trace_8h}\index{include/trace.h@{include/trace.h}}
+{\ttfamily \#include $<$ntddk.\+h$>$}\newline
+{\ttfamily \#include $<$wdf.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{trace_8h_a417231c0f41edf6b9206f6fcb2b0be94}{TRACEI}}(msg)~    Dbg\+Print(msg "{}\textbackslash{}n"{})
+\begin{DoxyCompactList}\small\item\em Trace without formatting. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{trace_8h_a9e6206fd25edfc9ccbc29a149a0ad2fb}{TRACE}}(level,  \+\_\+fmt\+\_\+, ...)~    Dbg\+Print\+Ex(DPFLTR\+\_\+\+DEFAULT\+\_\+\+ID, level, \+\_\+fmt\+\_\+ "{}\textbackslash{}n"{}, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Trace with log level and formatting. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{trace_8h_a805a48ca8324f35a46f5251265d7d668}{TRACE\+\_\+\+LEVEL\+\_\+\+INFO}}~DPFLTR\+\_\+\+INFO\+\_\+\+LEVEL
+\item 
+\#define \mbox{\hyperlink{trace_8h_af31e23d153918f8c507a0d46fbf2b2a9}{TRACE\+\_\+\+LEVEL\+\_\+\+ERROR}}~DPFLTR\+\_\+\+ERROR\+\_\+\+LEVEL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{trace_8h_a9e6206fd25edfc9ccbc29a149a0ad2fb}\label{trace_8h_a9e6206fd25edfc9ccbc29a149a0ad2fb} 
+\index{trace.h@{trace.h}!TRACE@{TRACE}}
+\index{TRACE@{TRACE}!trace.h@{trace.h}}
+\doxysubsubsection{\texorpdfstring{TRACE}{TRACE}}
+{\footnotesize\ttfamily \#define TRACE(\begin{DoxyParamCaption}\item[{}]{level,  }\item[{}]{\+\_\+fmt\+\_\+,  }\item[{}]{... }\end{DoxyParamCaption})~    Dbg\+Print\+Ex(DPFLTR\+\_\+\+DEFAULT\+\_\+\+ID, level, \+\_\+fmt\+\_\+ "{}\textbackslash{}n"{}, \+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)}
+
+
+
+Trace with log level and formatting. 
+
+Writtin formatted message with trace level to kernel log.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em level} & Level of trace message. \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+fmt\+\_\+} & Formatted string. \\
+\hline
+\mbox{\texttt{ in}}  & {\em vargs} & Variables represented in the format string. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{trace_8h_af31e23d153918f8c507a0d46fbf2b2a9}\label{trace_8h_af31e23d153918f8c507a0d46fbf2b2a9} 
+\index{trace.h@{trace.h}!TRACE\_LEVEL\_ERROR@{TRACE\_LEVEL\_ERROR}}
+\index{TRACE\_LEVEL\_ERROR@{TRACE\_LEVEL\_ERROR}!trace.h@{trace.h}}
+\doxysubsubsection{\texorpdfstring{TRACE\_LEVEL\_ERROR}{TRACE\_LEVEL\_ERROR}}
+{\footnotesize\ttfamily \#define TRACE\+\_\+\+LEVEL\+\_\+\+ERROR~DPFLTR\+\_\+\+ERROR\+\_\+\+LEVEL}
+
+\Hypertarget{trace_8h_a805a48ca8324f35a46f5251265d7d668}\label{trace_8h_a805a48ca8324f35a46f5251265d7d668} 
+\index{trace.h@{trace.h}!TRACE\_LEVEL\_INFO@{TRACE\_LEVEL\_INFO}}
+\index{TRACE\_LEVEL\_INFO@{TRACE\_LEVEL\_INFO}!trace.h@{trace.h}}
+\doxysubsubsection{\texorpdfstring{TRACE\_LEVEL\_INFO}{TRACE\_LEVEL\_INFO}}
+{\footnotesize\ttfamily \#define TRACE\+\_\+\+LEVEL\+\_\+\+INFO~DPFLTR\+\_\+\+INFO\+\_\+\+LEVEL}
+
+\Hypertarget{trace_8h_a417231c0f41edf6b9206f6fcb2b0be94}\label{trace_8h_a417231c0f41edf6b9206f6fcb2b0be94} 
+\index{trace.h@{trace.h}!TRACEI@{TRACEI}}
+\index{TRACEI@{TRACEI}!trace.h@{trace.h}}
+\doxysubsubsection{\texorpdfstring{TRACEI}{TRACEI}}
+{\footnotesize\ttfamily \#define TRACEI(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~    Dbg\+Print(msg "{}\textbackslash{}n"{})}
+
+
+
+Trace without formatting. 
+
+Writting message to Windows kernel log.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg} & message that must be written to kernel log. \\
+\hline
+\end{DoxyParams}

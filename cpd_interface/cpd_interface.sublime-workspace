@@ -1,0 +1,683 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Vie",
+				"ViewportCommand"
+			],
+			[
+				"title",
+				"titlebar_response"
+			],
+			[
+				"Md",
+				"Maximized()"
+			],
+			[
+				"unw",
+				"unwrap_or(…)"
+			],
+			[
+				"titlebar",
+				"titlebar_rect"
+			],
+			[
+				"titleba",
+				"titlebar_response"
+			],
+			[
+				"right",
+				"right_bottom()"
+			],
+			[
+				"left",
+				"left_bottom()"
+			],
+			[
+				"Font",
+				"FontId"
+			],
+			[
+				"titlere",
+				"titlebar_rect"
+			],
+			[
+				"CE",
+				"CENTER_CENTER"
+			],
+			[
+				"hand",
+				"handleRegistrationUser"
+			],
+			[
+				"tg",
+				"telegramBot"
+			],
+			[
+				"R",
+				"RegSurname"
+			],
+			[
+				"Reg",
+				"RegState"
+			],
+			[
+				"shri",
+				"shrink(…)"
+			],
+			[
+				"g",
+				"fg_stroke"
+			],
+			[
+				"u",
+				"unwrap_or(…)"
+			],
+			[
+				"wi",
+				"with_main_justify(…)"
+			],
+			[
+				"wt",
+				"with_main_align(…)"
+			],
+			[
+				"wiht",
+				"with_main_justify(…)"
+			],
+			[
+				"with",
+				"with_main_justify(…)"
+			],
+			[
+				"in",
+				"info_msg"
+			],
+			[
+				"Msg",
+				"MsgBoxScreen (use super::message_screen::MsgBoxScreen)"
+			],
+			[
+				"msg",
+				"msg_level"
+			],
+			[
+				"ms",
+				"msg_level"
+			],
+			[
+				"egui",
+				"egui::ViewportBuilder{}"
+			],
+			[
+				"Ms",
+				"MsgBoxScreen"
+			],
+			[
+				"Command",
+				"Command (use std::process::Command)"
+			],
+			[
+				"Comm",
+				"Command::UNZIPING"
+			],
+			[
+				"Comma",
+				"Command::UNZIPING"
+			],
+			[
+				"Unzpack",
+				"Unzpack (use unzpack::Unzpack)"
+			],
+			[
+				"create",
+				"create_dir_all(…)"
+			],
+			[
+				"la",
+				"launcher_sender_thread"
+			],
+			[
+				"download",
+				"download_minecraft(…) (use crate::minecraft::downloader::download_minecraft)"
+			],
+			[
+				"D",
+				"DOWNLOADED"
+			],
+			[
+				"env",
+				"env (use std::env)"
+			],
+			[
+				"Error",
+				"Error (use std::error::Error)"
+			],
+			[
+				"unwrap_or",
+				"unwrap_or_default"
+			],
+			[
+				"data",
+				"UpdateData"
+			],
+			[
+				"Data",
+				"UpdateData{}"
+			],
+			[
+				"write_",
+				"write_all(…) (as Write)"
+			],
+			[
+				"con",
+				"content_length()"
+			],
+			[
+				"CONTENT_L",
+				"CONTENT_LENGTH (use reqwest::header::CONTENT_LENGTH)"
+			],
+			[
+				"Result",
+				"Result (use reqwest::Result)"
+			],
+			[
+				"as_",
+				"as_mut()"
+			],
+			[
+				"SOme",
+				"Some()"
+			],
+			[
+				"reAD",
+				"Read"
+			],
+			[
+				"der",
+				"derive(…)"
+			],
+			[
+				"write",
+				"write_all(…) (use std::io::Write)"
+			],
+			[
+				"Path",
+				"PathBuf (use std::path::PathBuf)"
+			],
+			[
+				"uw",
+				"unwrap_or(…)"
+			],
+			[
+				"te",
+				"template_dir()"
+			],
+			[
+				"Update",
+				"UpdateData (use crate::launcher::launcher_update::UpdateData)"
+			],
+			[
+				"Mute",
+				"Mutex (use std::sync::Mutex)"
+			],
+			[
+				"Mut",
+				"Mutex<…> (use std::sync::Mutex)"
+			],
+			[
+				"viewpo",
+				"send_viewport_cmd(…)"
+			],
+			[
+				"update",
+				"update_launcher() (use funnylauncher::launcher::launcher_update::update_launcher)"
+			],
+			[
+				"in_game",
+				"in_game_guard"
+			],
+			[
+				"enab",
+				"add_enabled(…)"
+			],
+			[
+				"logi",
+				"logic_sender_thread"
+			],
+			[
+				"log",
+				"logic_receiver"
+			],
+			[
+				"print",
+				"println!(…)"
+			],
+			[
+				"ing",
+				"in_game_guard"
+			],
+			[
+				"in_gam",
+				"in_game_thread"
+			],
+			[
+				"is_ru",
+				"is_running_guard"
+			],
+			[
+				"is_",
+				"is_running_guard"
+			],
+			[
+				"is",
+				"is_running_guard"
+			],
+			[
+				"unwr",
+				"unwrap_or_default()"
+			],
+			[
+				"Com",
+				"Command::CONTINUE"
+			],
+			[
+				"Comman",
+				"Command (use crate::launcher::commands::Command)"
+			],
+			[
+				"gu",
+				"gui_thread"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Test"
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Bench"
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					"Build & Run"
+				]
+			],
+			[
+				"Packages/Rust/Cargo.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				":redo",
+				"Discord Rich Presence: Reconnect to Discord"
+			],
+			[
+				":W",
+				":w - Save"
+			],
+			[
+				"de",
+				"Debugger: Quit"
+			],
+			[
+				"debugg",
+				"Debugger: Open"
+			],
+			[
+				"deb",
+				"Debugger: Open"
+			],
+			[
+				"open",
+				"Debugger: Open"
+			],
+			[
+				"Deb",
+				"Debugger: Install Adapters"
+			],
+			[
+				"Debug",
+				"Debugger: Open"
+			],
+			[
+				"install",
+				"Debugger: Install Adapters"
+			],
+			[
+				"time",
+				"CodeTimeTracker: Open Dashboard"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pre",
+				"Preferences: Settings"
+			],
+			[
+				"prefe",
+				"Preferences: Settings"
+			],
+			[
+				"ke",
+				"Preferences: Key Bindings"
+			],
+			[
+				"lsp",
+				"LSP: Toggle Diagnostics Panel"
+			],
+			[
+				"comman",
+				"Preferences: Terminus Command Palette"
+			],
+			[
+				"terminus",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"rust ",
+				"Preferences: LSP-rust-analyzer Settings"
+			],
+			[
+				"setti",
+				"Preferences: Settings"
+			],
+			[
+				"lsp rust",
+				"Preferences: LSP-rust-analyzer Settings"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"autosave",
+				"Toggle AutoSave: all files"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 218.0,
+		"history":
+		[
+			"exit(1)",
+			"exit",
+			"environ",
+			"ls",
+			"help"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Kamil/Documents/com_port_driver/cpd_interface"
+	],
+	"file_history":
+	[
+		"/C/Users/Kamil/Documents/com_port_driver/cpd/cpd.sublime-project",
+		"/C/Users/Kamil/Documents/com_port_driver/spd/cmake/FindWDK.cmake",
+		"/C/Users/Kamil/Documents/com_port_driver/spd/src/serial_driver.c",
+		"/C/Users/Kamil/Documents/com_port_driver/spd/CMakeLists.txt",
+		"/C/Users/Kamil/Documents/serial_port_driver/spd/cmake/FindWDK.cmake",
+		"/C/Users/Kamil/Documents/funnylauncher/src/launcher/launcher_controller.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/gui/window_frame.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/gui/update_screen.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/gui/mod.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/gui/main_screen.rs",
+		"/C/Users/Kamil/Desktop/main.go",
+		"/C/Users/Kamil/Documents/funnylauncher/src/gui/titlebar.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/launcher/launcher_update.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/utils/constants.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/gui/message_screen.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/Cargo.toml",
+		"/C/Users/Kamil/Documents/funnylauncher/src/utils/mod.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/launcher/commands.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/minecraft/validate.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/minecraft/downloader.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/main.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/.gitignore",
+		"/C/Users/Kamil/Documents/funnylauncher/src/launcher/mod.rs",
+		"/C/Users/Kamil/Documents/funnyserver/src/main.rs",
+		"/C/Users/Kamil/.cargo/registry/src/index.crates.io-6f17d22bba15001f/winit-0.28.7/src/platform_impl/windows/dpi.rs",
+		"/C/Users/Kamil/.cargo/registry/src/index.crates.io-6f17d22bba15001f/winit-0.28.7/src/platform_impl/windows/event_loop.rs",
+		"/C/Users/Kamil/.cargo/registry/src/index.crates.io-6f17d22bba15001f/winit-0.28.7/src/event_loop.rs",
+		"/C/Users/Kamil/.cargo/registry/src/index.crates.io-6f17d22bba15001f/eframe-0.24.1/src/native/run.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/lib.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/project.sublime-project",
+		"/C/Users/Kamil/Documents/funnylauncher/src/minecraft/mod.rs",
+		"/C/Users/Kamil/Documents/funnylauncher/src/minecraft/tests.rs",
+		"/C/Users/Kamil/.cargo/registry/src/index.crates.io-6f17d22bba15001f/eframe-0.24.1/src/epi.rs",
+		"/C/Users/Kamil/AppData/Roaming/Sublime Text/Packages/User/Default.sublime-commands",
+		"/C/Users/Kamil/AppData/Roaming/Sublime Text/Packages/Terminus/Default.sublime-commands",
+		"/C/Program Files/Sublime Text/Packages/Rust.sublime-package"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 114.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Debugger":
+	{
+		"height": 254.0
+	},
+	"output.Debugger Console":
+	{
+		"height": 122.0
+	},
+	"output.Debugger Terminal":
+	{
+		"height": 254.0
+	},
+	"output.LSP Log Panel":
+	{
+		"height": 0.0
+	},
+	"output.Terminus":
+	{
+		"height": 229.0
+	},
+	"output.diagnostics":
+	{
+		"height": 201.0
+	},
+	"output.exec":
+	{
+		"height": 216.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups-dummy":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "cpd_interface.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 303.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 600.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 207.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

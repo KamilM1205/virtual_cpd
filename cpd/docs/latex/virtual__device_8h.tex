@@ -1,0 +1,321 @@
+\doxysection{include/virtual\+\_\+device.h File Reference}
+\hypertarget{virtual__device_8h}{}\label{virtual__device_8h}\index{include/virtual\_device.h@{include/virtual\_device.h}}
+{\ttfamily \#include $<$wdf.\+h$>$}\newline
+{\ttfamily \#include $<$wdm.\+h$>$}\newline
+{\ttfamily \#include "{}serial.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvdevice__context}{vdevice\+\_\+context}}
+\begin{DoxyCompactList}\small\item\em Struct that contains device parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structvdevice__context}{vdevice\+\_\+context}} \mbox{\hyperlink{virtual__device_8h_a2367c44c1ee9804235c53db41f59f9f2}{vdevice\+\_\+context\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Struct that contains device parameters. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structvdevice__context}{vdevice\+\_\+context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{virtual__device_8h_a82d19ed1decb63b94c5804d27e6fd674}{WDF\+\_\+\+DECLARE\+\_\+\+CONTEXT\+\_\+\+TYPE\+\_\+\+WITH\+\_\+\+NAME}} (\mbox{\hyperlink{virtual__device_8h_a2367c44c1ee9804235c53db41f59f9f2}{vdevice\+\_\+context\+\_\+t}}, get\+\_\+vdevice\+\_\+context)
+\item 
+NTSTATUS \mbox{\hyperlink{virtual__device_8h_a6a70cc5907ce1614983383ef199cd669}{device\+\_\+create}} (\+\_\+\+In\+\_\+ WDFDRIVER driver, \+\_\+\+In\+\_\+ PWDFDEVICE\+\_\+\+INIT device\+\_\+init, \+\_\+\+Out\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}} \texorpdfstring{$\ast$}{*}device\+\_\+context)
+\begin{DoxyCompactList}\small\item\em Create and initialize an instance of the device. \end{DoxyCompactList}\item 
+NTSTATUS \mbox{\hyperlink{virtual__device_8h_a4e73a587d50ba66511a063ec6006a17b}{device\+\_\+configure}} (\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}} device\+\_\+context)
+\begin{DoxyCompactList}\small\item\em Function device configuring. \end{DoxyCompactList}\item 
+NTSTATUS \mbox{\hyperlink{virtual__device_8h_ab224b4c75cf5da101292128ba2194160}{device\+\_\+get\+\_\+pdoname}} (\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}} device\+\_\+context)
+\begin{DoxyCompactList}\small\item\em Get physical device object name. \end{DoxyCompactList}\item 
+NTSTATUS \mbox{\hyperlink{virtual__device_8h_af91620dfa6066bd8257b0a9aaabea82f}{device\+\_\+write\+\_\+legacy\+\_\+hardwarekey}} (\+\_\+\+In\+\_\+ PWSTR pdo\+\_\+name, \+\_\+\+In\+\_\+ PWSTR com\+\_\+port, \+\_\+\+In\+\_\+ WDFDEVICE device)
+\begin{DoxyCompactList}\small\item\em Write using com port to registry. \end{DoxyCompactList}\item 
+ULONG \mbox{\hyperlink{virtual__device_8h_a0b4ca2cfa58c8b80c24bef4562c9e828}{get\+\_\+baudrate}} (\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}} device\+\_\+context)
+\begin{DoxyCompactList}\small\item\em Returning baudrate value. \end{DoxyCompactList}\item 
+VOID \mbox{\hyperlink{virtual__device_8h_a78afa0799d60791507c87453e91cf3d3}{set\+\_\+baudrate}} (\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}} device\+\_\+context, \+\_\+\+In\+\_\+ ULONG baudrate)
+\begin{DoxyCompactList}\small\item\em Set baudrate value. \end{DoxyCompactList}\item 
+ULONG \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{virtual__device_8h_a3e8ae1631d3fc897978469f79e4aa9b2}{get\+\_\+fifo\+\_\+control\+\_\+register\+\_\+ptr}} (\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}} device\+\_\+context)
+\begin{DoxyCompactList}\small\item\em Get pointer to FCR. \end{DoxyCompactList}\item 
+ULONG \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{virtual__device_8h_a31a61a207706097a826cb9742229df1b}{get\+\_\+line\+\_\+control\+\_\+register\+\_\+ptr}} (\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}} device\+\_\+context)
+\begin{DoxyCompactList}\small\item\em Get pointer to LCR. \end{DoxyCompactList}\item 
+VOID \mbox{\hyperlink{virtual__device_8h_a0bfb5d586c8ffac8f1467f6f5188c26b}{set\+\_\+valid\+\_\+data\+\_\+mask}} (\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}} device\+\_\+context, \+\_\+\+In\+\_\+ UCHAR mask)
+\begin{DoxyCompactList}\small\item\em Set valid data mask. \end{DoxyCompactList}\item 
+VOID \mbox{\hyperlink{virtual__device_8h_adc34c18d00742087ee455007a75264fd}{set\+\_\+timeouts}} (\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}} device\+\_\+context, \+\_\+\+In\+\_\+ \mbox{\hyperlink{serial_8h_a497869eaf6d9ad64579325b7fffb0f48}{serial\+\_\+timeouts\+\_\+t}} timeouts)
+\begin{DoxyCompactList}\small\item\em Set port timeouts. \end{DoxyCompactList}\item 
+VOID \mbox{\hyperlink{virtual__device_8h_a01292a0b5b23d5fab5d56b4cb74ed4b7}{get\+\_\+timeouts}} (\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}} device\+\_\+context, \+\_\+\+Out\+\_\+ \mbox{\hyperlink{serial_8h_a497869eaf6d9ad64579325b7fffb0f48}{serial\+\_\+timeouts\+\_\+t}} \texorpdfstring{$\ast$}{*}timeouts)
+\begin{DoxyCompactList}\small\item\em Get port timeouts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+EVT\+\_\+\+WDF\+\_\+\+DEVICE\+\_\+\+CONTEXT\+\_\+\+CLEANUP \mbox{\hyperlink{virtual__device_8h_a34464d828bace8709f24aaec0a0030ce}{evt\+\_\+device\+\_\+cleanup}}
+\begin{DoxyCompactList}\small\item\em Cleanup callback function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}\label{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088} 
+\index{virtual\_device.h@{virtual\_device.h}!p\_vdevice\_context\_t@{p\_vdevice\_context\_t}}
+\index{p\_vdevice\_context\_t@{p\_vdevice\_context\_t}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{p\_vdevice\_context\_t}{p\_vdevice\_context\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structvdevice__context}{vdevice\+\_\+context}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}}}
+
+\Hypertarget{virtual__device_8h_a2367c44c1ee9804235c53db41f59f9f2}\label{virtual__device_8h_a2367c44c1ee9804235c53db41f59f9f2} 
+\index{virtual\_device.h@{virtual\_device.h}!vdevice\_context\_t@{vdevice\_context\_t}}
+\index{vdevice\_context\_t@{vdevice\_context\_t}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{vdevice\_context\_t}{vdevice\_context\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structvdevice__context}{vdevice\+\_\+context}} \mbox{\hyperlink{virtual__device_8h_a2367c44c1ee9804235c53db41f59f9f2}{vdevice\+\_\+context\+\_\+t}}}
+
+
+
+Struct that contains device parameters. 
+
+Virtual device context -\/ struct that contains virtual device params and data. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{virtual__device_8h_a4e73a587d50ba66511a063ec6006a17b}\label{virtual__device_8h_a4e73a587d50ba66511a063ec6006a17b} 
+\index{virtual\_device.h@{virtual\_device.h}!device\_configure@{device\_configure}}
+\index{device\_configure@{device\_configure}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{device\_configure()}{device\_configure()}}
+{\footnotesize\ttfamily NTSTATUS device\+\_\+configure (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}}}]{device\+\_\+context }\end{DoxyParamCaption})}
+
+
+
+Function device configuring. 
+
+This function is called after the device callback object has been initialized and returned to the driver. It would setup the device\textquotesingle{}s queues and their corresponding callback objects.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+context} & Device data object for which we handling events.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of function execution. 
+\end{DoxyReturn}
+\Hypertarget{virtual__device_8h_a6a70cc5907ce1614983383ef199cd669}\label{virtual__device_8h_a6a70cc5907ce1614983383ef199cd669} 
+\index{virtual\_device.h@{virtual\_device.h}!device\_create@{device\_create}}
+\index{device\_create@{device\_create}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{device\_create()}{device\_create()}}
+{\footnotesize\ttfamily NTSTATUS device\+\_\+create (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ WDFDRIVER}]{driver,  }\item[{\+\_\+\+In\+\_\+ PWDFDEVICE\+\_\+\+INIT}]{device\+\_\+init,  }\item[{\+\_\+\+Out\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{device\+\_\+context }\end{DoxyParamCaption})}
+
+
+
+Create and initialize an instance of the device. 
+
+Creating and initializing an instance of the cpd\textquotesingle{}s device callback object.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em driver} & The handle of driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em device\+\_\+init} & The initializing struct. Is used for wdk functions. \\
+\hline
+\mbox{\texttt{ out}}  & {\em device\+\_\+context} & Pointer to device context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of function execution. 
+\end{DoxyReturn}
+\Hypertarget{virtual__device_8h_ab224b4c75cf5da101292128ba2194160}\label{virtual__device_8h_ab224b4c75cf5da101292128ba2194160} 
+\index{virtual\_device.h@{virtual\_device.h}!device\_get\_pdoname@{device\_get\_pdoname}}
+\index{device\_get\_pdoname@{device\_get\_pdoname}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{device\_get\_pdoname()}{device\_get\_pdoname()}}
+{\footnotesize\ttfamily NTSTATUS device\+\_\+get\+\_\+pdoname (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}}}]{device\+\_\+context }\end{DoxyParamCaption})}
+
+
+
+Get physical device object name. 
+
+Get physical device object name and save it in device\+\_\+context data structure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+context} & Device data object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of function execution. 
+\end{DoxyReturn}
+\Hypertarget{virtual__device_8h_af91620dfa6066bd8257b0a9aaabea82f}\label{virtual__device_8h_af91620dfa6066bd8257b0a9aaabea82f} 
+\index{virtual\_device.h@{virtual\_device.h}!device\_write\_legacy\_hardwarekey@{device\_write\_legacy\_hardwarekey}}
+\index{device\_write\_legacy\_hardwarekey@{device\_write\_legacy\_hardwarekey}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{device\_write\_legacy\_hardwarekey()}{device\_write\_legacy\_hardwarekey()}}
+{\footnotesize\ttfamily NTSTATUS device\+\_\+write\+\_\+legacy\+\_\+hardwarekey (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ PWSTR}]{pdo\+\_\+name,  }\item[{\+\_\+\+In\+\_\+ PWSTR}]{com\+\_\+port,  }\item[{\+\_\+\+In\+\_\+ WDFDEVICE}]{device }\end{DoxyParamCaption})}
+
+
+
+Write using com port to registry. 
+
+Write hardware key to registry that contain pdo name and using com port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pdo\+\_\+name} & Physical device object name. \\
+\hline
+\mbox{\texttt{ in}}  & {\em com\+\_\+port} & Com port which we want to use. \\
+\hline
+\mbox{\texttt{ in}}  & {\em device} & Handle of device.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of function execution. 
+\end{DoxyReturn}
+\Hypertarget{virtual__device_8h_a0b4ca2cfa58c8b80c24bef4562c9e828}\label{virtual__device_8h_a0b4ca2cfa58c8b80c24bef4562c9e828} 
+\index{virtual\_device.h@{virtual\_device.h}!get\_baudrate@{get\_baudrate}}
+\index{get\_baudrate@{get\_baudrate}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{get\_baudrate()}{get\_baudrate()}}
+{\footnotesize\ttfamily ULONG get\+\_\+baudrate (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}}}]{device\+\_\+context }\end{DoxyParamCaption})}
+
+
+
+Returning baudrate value. 
+
+Returning baudrate value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+context} & Device data object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Baudrate. 
+\end{DoxyReturn}
+\Hypertarget{virtual__device_8h_a3e8ae1631d3fc897978469f79e4aa9b2}\label{virtual__device_8h_a3e8ae1631d3fc897978469f79e4aa9b2} 
+\index{virtual\_device.h@{virtual\_device.h}!get\_fifo\_control\_register\_ptr@{get\_fifo\_control\_register\_ptr}}
+\index{get\_fifo\_control\_register\_ptr@{get\_fifo\_control\_register\_ptr}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{get\_fifo\_control\_register\_ptr()}{get\_fifo\_control\_register\_ptr()}}
+{\footnotesize\ttfamily ULONG \texorpdfstring{$\ast$}{*} get\+\_\+fifo\+\_\+control\+\_\+register\+\_\+ptr (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}}}]{device\+\_\+context }\end{DoxyParamCaption})}
+
+
+
+Get pointer to FCR. 
+
+FCR(\+First in, first out Control Register) -\/ using to buffering and flow control between hardware and software. See more\+: \href{https://www.lookrs232.com/rs232/fcr.htm}{\texttt{ https\+://www.\+lookrs232.\+com/rs232/fcr.\+htm}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+context} & Device data object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to FCR. 
+\end{DoxyReturn}
+\Hypertarget{virtual__device_8h_a31a61a207706097a826cb9742229df1b}\label{virtual__device_8h_a31a61a207706097a826cb9742229df1b} 
+\index{virtual\_device.h@{virtual\_device.h}!get\_line\_control\_register\_ptr@{get\_line\_control\_register\_ptr}}
+\index{get\_line\_control\_register\_ptr@{get\_line\_control\_register\_ptr}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{get\_line\_control\_register\_ptr()}{get\_line\_control\_register\_ptr()}}
+{\footnotesize\ttfamily ULONG \texorpdfstring{$\ast$}{*} get\+\_\+line\+\_\+control\+\_\+register\+\_\+ptr (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}}}]{device\+\_\+context }\end{DoxyParamCaption})}
+
+
+
+Get pointer to LCR. 
+
+Line Control register(\+LCR) -\/ sets the general connection parameters. See more\+: \href{https://www.lookrs232.com/rs232/lcr.htm}{\texttt{ https\+://www.\+lookrs232.\+com/rs232/lcr.\+htm}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+context} & Device data object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to LCR 
+\end{DoxyReturn}
+\Hypertarget{virtual__device_8h_a01292a0b5b23d5fab5d56b4cb74ed4b7}\label{virtual__device_8h_a01292a0b5b23d5fab5d56b4cb74ed4b7} 
+\index{virtual\_device.h@{virtual\_device.h}!get\_timeouts@{get\_timeouts}}
+\index{get\_timeouts@{get\_timeouts}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{get\_timeouts()}{get\_timeouts()}}
+{\footnotesize\ttfamily VOID get\+\_\+timeouts (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}}}]{device\+\_\+context,  }\item[{\+\_\+\+Out\+\_\+ \mbox{\hyperlink{serial_8h_a497869eaf6d9ad64579325b7fffb0f48}{serial\+\_\+timeouts\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{timeouts }\end{DoxyParamCaption})}
+
+
+
+Get port timeouts. 
+
+Get port timeouts data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+context} & Device data object. \\
+\hline
+\mbox{\texttt{ out}}  & {\em timeouts} & Pointer to struct that contains timeouts. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{virtual__device_8h_a78afa0799d60791507c87453e91cf3d3}\label{virtual__device_8h_a78afa0799d60791507c87453e91cf3d3} 
+\index{virtual\_device.h@{virtual\_device.h}!set\_baudrate@{set\_baudrate}}
+\index{set\_baudrate@{set\_baudrate}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{set\_baudrate()}{set\_baudrate()}}
+{\footnotesize\ttfamily VOID set\+\_\+baudrate (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}}}]{device\+\_\+context,  }\item[{\+\_\+\+In\+\_\+ ULONG}]{baudrate }\end{DoxyParamCaption})}
+
+
+
+Set baudrate value. 
+
+Set baudrate value.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+context} & Device data object. \\
+\hline
+\mbox{\texttt{ in}}  & {\em baudrate} & Baudrate value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{virtual__device_8h_adc34c18d00742087ee455007a75264fd}\label{virtual__device_8h_adc34c18d00742087ee455007a75264fd} 
+\index{virtual\_device.h@{virtual\_device.h}!set\_timeouts@{set\_timeouts}}
+\index{set\_timeouts@{set\_timeouts}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{set\_timeouts()}{set\_timeouts()}}
+{\footnotesize\ttfamily VOID set\+\_\+timeouts (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}}}]{device\+\_\+context,  }\item[{\+\_\+\+In\+\_\+ \mbox{\hyperlink{serial_8h_a497869eaf6d9ad64579325b7fffb0f48}{serial\+\_\+timeouts\+\_\+t}}}]{timeouts }\end{DoxyParamCaption})}
+
+
+
+Set port timeouts. 
+
+Set port\textquotesingle{}s time to wait data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+context} & Device data object. \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeouts} & Object that contain timeouts. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{virtual__device_8h_a0bfb5d586c8ffac8f1467f6f5188c26b}\label{virtual__device_8h_a0bfb5d586c8ffac8f1467f6f5188c26b} 
+\index{virtual\_device.h@{virtual\_device.h}!set\_valid\_data\_mask@{set\_valid\_data\_mask}}
+\index{set\_valid\_data\_mask@{set\_valid\_data\_mask}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{set\_valid\_data\_mask()}{set\_valid\_data\_mask()}}
+{\footnotesize\ttfamily VOID set\+\_\+valid\+\_\+data\+\_\+mask (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ \mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\+\_\+vdevice\+\_\+context\+\_\+t}}}]{device\+\_\+context,  }\item[{\+\_\+\+In\+\_\+ UCHAR}]{mask }\end{DoxyParamCaption})}
+
+
+
+Set valid data mask. 
+
+Add more info.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em device\+\_\+context} & Device data object. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mask} & Data mask. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{virtual__device_8h_a82d19ed1decb63b94c5804d27e6fd674}\label{virtual__device_8h_a82d19ed1decb63b94c5804d27e6fd674} 
+\index{virtual\_device.h@{virtual\_device.h}!WDF\_DECLARE\_CONTEXT\_TYPE\_WITH\_NAME@{WDF\_DECLARE\_CONTEXT\_TYPE\_WITH\_NAME}}
+\index{WDF\_DECLARE\_CONTEXT\_TYPE\_WITH\_NAME@{WDF\_DECLARE\_CONTEXT\_TYPE\_WITH\_NAME}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{WDF\_DECLARE\_CONTEXT\_TYPE\_WITH\_NAME()}{WDF\_DECLARE\_CONTEXT\_TYPE\_WITH\_NAME()}}
+{\footnotesize\ttfamily WDF\+\_\+\+DECLARE\+\_\+\+CONTEXT\+\_\+\+TYPE\+\_\+\+WITH\+\_\+\+NAME (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{virtual__device_8h_a2367c44c1ee9804235c53db41f59f9f2}{vdevice\+\_\+context\+\_\+t}}}]{,  }\item[{get\+\_\+vdevice\+\_\+context}]{ }\end{DoxyParamCaption})}
+
+Here we create getter for device context. More here\+: \href{https://learn.microsoft.com/ru-ru/windows-hardware/drivers/wdf/wdf-declare-context-type-with-name}{\texttt{ https\+://learn.\+microsoft.\+com/ru-\/ru/windows-\/hardware/drivers/wdf/wdf-\/declare-\/context-\/type-\/with-\/name}} 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{virtual__device_8h_a34464d828bace8709f24aaec0a0030ce}\label{virtual__device_8h_a34464d828bace8709f24aaec0a0030ce} 
+\index{virtual\_device.h@{virtual\_device.h}!evt\_device\_cleanup@{evt\_device\_cleanup}}
+\index{evt\_device\_cleanup@{evt\_device\_cleanup}!virtual\_device.h@{virtual\_device.h}}
+\doxysubsubsection{\texorpdfstring{evt\_device\_cleanup}{evt\_device\_cleanup}}
+{\footnotesize\ttfamily EVT\+\_\+\+WDF\+\_\+\+DEVICE\+\_\+\+CONTEXT\+\_\+\+CLEANUP evt\+\_\+device\+\_\+cleanup}
+
+
+
+Cleanup callback function. 
+
+Callback function that calling when device was removed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em object} & represent object that must be removed. In our case WDFDEVICE. \\
+\hline
+\end{DoxyParams}

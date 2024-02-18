@@ -1,0 +1,20 @@
+\doxysection{trace.\+h}
+\hypertarget{trace_8h_source}{}\label{trace_8h_source}\index{include/trace.h@{include/trace.h}}
+\mbox{\hyperlink{trace_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <ntddk.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <wdf.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ TRACEI(msg)\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ DbgPrint(msg\ "{}\(\backslash\)n"{})}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ TRACE(level,\ \_fmt\_,\ ...)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ \ \ DbgPrintEx(DPFLTR\_DEFAULT\_ID,\ level,\ \_fmt\_\ "{}\(\backslash\)n"{},\ \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ TRACE\_LEVEL\_INFO\ \ \ \ DPFLTR\_INFO\_LEVEL}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ TRACE\_LEVEL\_ERROR\ \ \ DPFLTR\_ERROR\_LEVEL}}
+
+\end{DoxyCode}

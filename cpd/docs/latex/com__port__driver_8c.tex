@@ -1,0 +1,82 @@
+\doxysection{src/com\+\_\+port\+\_\+driver.c File Reference}
+\hypertarget{com__port__driver_8c}{}\label{com__port__driver_8c}\index{src/com\_port\_driver.c@{src/com\_port\_driver.c}}
+{\ttfamily \#include $<$wdm.\+h$>$}\newline
+{\ttfamily \#include $<$wdf.\+h$>$}\newline
+{\ttfamily \#include $<$initguid.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}com\+\_\+port\+\_\+driver.\+h"{}}\newline
+{\ttfamily \#include "{}trace.\+h"{}}\newline
+{\ttfamily \#include "{}virtual\+\_\+device.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+VOID \mbox{\hyperlink{com__port__driver_8c_a894ab166a2caa569e09eb1fbe83c80d7}{driver\+\_\+unload}} (\+\_\+\+In\+\_\+ WDFDRIVER driver)
+\begin{DoxyCompactList}\small\item\em Driver unload callback. \end{DoxyCompactList}\item 
+NTSTATUS \mbox{\hyperlink{com__port__driver_8c_aaed3f5fc6912c1abba327266e358bcf7}{driver\+\_\+entry}} (\+\_\+\+In\+\_\+ PDRIVER\+\_\+\+OBJECT driver\+\_\+object, \+\_\+\+In\+\_\+ PUNICODE\+\_\+\+STRING registry\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Driver entry function. \end{DoxyCompactList}\item 
+NTSTATUS \mbox{\hyperlink{com__port__driver_8c_a373be3cc2f4cc82232c6130f4e21d6de}{evt\+\_\+device\+\_\+add}} (\+\_\+\+In\+\_\+ WDFDRIVER driver, \+\_\+\+Inout\+\_\+ PWDFDEVICE\+\_\+\+INIT device\+\_\+init)
+\begin{DoxyCompactList}\small\item\em Device add callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{com__port__driver_8c_aaed3f5fc6912c1abba327266e358bcf7}\label{com__port__driver_8c_aaed3f5fc6912c1abba327266e358bcf7} 
+\index{com\_port\_driver.c@{com\_port\_driver.c}!driver\_entry@{driver\_entry}}
+\index{driver\_entry@{driver\_entry}!com\_port\_driver.c@{com\_port\_driver.c}}
+\doxysubsubsection{\texorpdfstring{driver\_entry()}{driver\_entry()}}
+{\footnotesize\ttfamily NTSTATUS driver\+\_\+entry (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ PDRIVER\+\_\+\+OBJECT}]{driver\+\_\+object,  }\item[{\+\_\+\+In\+\_\+ PUNICODE\+\_\+\+STRING}]{registry\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Driver entry function. 
+
+That callback function executing when windows loading driver.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em driver\+\_\+object} & Pointer to driver object. \\
+\hline
+\mbox{\texttt{ in}}  & {\em registry\+\_\+path} & Path to the driver\textquotesingle{}s parameters key in the registry.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of function execution 
+\end{DoxyReturn}
+\Hypertarget{com__port__driver_8c_a894ab166a2caa569e09eb1fbe83c80d7}\label{com__port__driver_8c_a894ab166a2caa569e09eb1fbe83c80d7} 
+\index{com\_port\_driver.c@{com\_port\_driver.c}!driver\_unload@{driver\_unload}}
+\index{driver\_unload@{driver\_unload}!com\_port\_driver.c@{com\_port\_driver.c}}
+\doxysubsubsection{\texorpdfstring{driver\_unload()}{driver\_unload()}}
+{\footnotesize\ttfamily VOID driver\+\_\+unload (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ WDFDRIVER}]{driver }\end{DoxyParamCaption})}
+
+
+
+Driver unload callback. 
+
+That callback function executing when windows unloading driver.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em driver} & Handle to a driver. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{com__port__driver_8c_a373be3cc2f4cc82232c6130f4e21d6de}\label{com__port__driver_8c_a373be3cc2f4cc82232c6130f4e21d6de} 
+\index{com\_port\_driver.c@{com\_port\_driver.c}!evt\_device\_add@{evt\_device\_add}}
+\index{evt\_device\_add@{evt\_device\_add}!com\_port\_driver.c@{com\_port\_driver.c}}
+\doxysubsubsection{\texorpdfstring{evt\_device\_add()}{evt\_device\_add()}}
+{\footnotesize\ttfamily NTSTATUS evt\+\_\+device\+\_\+add (\begin{DoxyParamCaption}\item[{\+\_\+\+In\+\_\+ WDFDRIVER}]{driver,  }\item[{\+\_\+\+Inout\+\_\+ PWDFDEVICE\+\_\+\+INIT}]{device\+\_\+init }\end{DoxyParamCaption})}
+
+
+
+Device add callback. 
+
+That callback function executing when PnP dispatcher detected new device.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em driver} & Handle of to a driver. \\
+\hline
+\mbox{\texttt{ in}}  & {\em device\+\_\+init} & The initializing struct. Used for wdk functions.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status of function execution 
+\end{DoxyReturn}

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "wdm.h": "c",
+        "wdf.h": "c"
+    }
+}

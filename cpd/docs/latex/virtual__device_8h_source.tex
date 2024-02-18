@@ -1,0 +1,90 @@
+\doxysection{virtual\+\_\+device.\+h}
+\hypertarget{virtual__device_8h_source}{}\label{virtual__device_8h_source}\index{include/virtual\_device.h@{include/virtual\_device.h}}
+\mbox{\hyperlink{virtual__device_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <wdf.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <wdm.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{serial_8h}{serial.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvdevice__context}{vdevice\_context}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ WDFDEVICE\ \ \ \mbox{\hyperlink{structvdevice__context_ad6edc8112bbc42368104f334b33ef5eb}{device}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \ \ \ \ ULONG\ \ \ \ \ \ \ \mbox{\hyperlink{structvdevice__context_adff82fde8d265b16e74ee5756d420713}{baudrate}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \ \ PWSTR\ \ \ \ \ \ \ \mbox{\hyperlink{structvdevice__context_a22f4c7b96e7c875023f584b587ace92c}{pdo\_name}};}
+\DoxyCodeLine{00035\ \}\ \mbox{\hyperlink{virtual__device_8h_a2367c44c1ee9804235c53db41f59f9f2}{vdevice\_context\_t}},\ *\mbox{\hyperlink{virtual__device_8h_a4f2917ef6ecdd55a7e8d8c23822a4088}{p\_vdevice\_context\_t}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \mbox{\hyperlink{virtual__device_8h_a82d19ed1decb63b94c5804d27e6fd674}{WDF\_DECLARE\_CONTEXT\_TYPE\_WITH\_NAME}}(\mbox{\hyperlink{structvdevice__context}{vdevice\_context\_t}},\ get\_vdevice\_context);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00052\ NTSTATUS}
+\DoxyCodeLine{00053\ \mbox{\hyperlink{virtual__device_8h_a6a70cc5907ce1614983383ef199cd669}{device\_create}}(}
+\DoxyCodeLine{00054\ \ \ \ \ \_In\_\ \ \ \ WDFDRIVER\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ driver,}
+\DoxyCodeLine{00055\ \ \ \ \ \_In\_\ \ \ \ PWDFDEVICE\_INIT\ \ \ \ \ \ \ \ \ device\_init,}
+\DoxyCodeLine{00056\ \ \ \ \ \_Out\_\ \ \ \mbox{\hyperlink{structvdevice__context}{p\_vdevice\_context\_t}}*\ \ \ \ device\_context}
+\DoxyCodeLine{00057\ );}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00070\ NTSTATUS}
+\DoxyCodeLine{00071\ \mbox{\hyperlink{virtual__device_8h_a4e73a587d50ba66511a063ec6006a17b}{device\_configure}}(}
+\DoxyCodeLine{00072\ \ \ \ \ \_In\_\ \ \ \ \mbox{\hyperlink{structvdevice__context}{p\_vdevice\_context\_t}}\ device\_context}
+\DoxyCodeLine{00073\ );}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00084\ NTSTATUS}
+\DoxyCodeLine{00085\ \mbox{\hyperlink{virtual__device_8h_ab224b4c75cf5da101292128ba2194160}{device\_get\_pdoname}}(}
+\DoxyCodeLine{00086\ \ \ \ \ \_In\_\ \ \ \ \mbox{\hyperlink{structvdevice__context}{p\_vdevice\_context\_t}}\ device\_context}
+\DoxyCodeLine{00087\ );}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00100\ NTSTATUS}
+\DoxyCodeLine{00101\ \mbox{\hyperlink{virtual__device_8h_af91620dfa6066bd8257b0a9aaabea82f}{device\_write\_legacy\_hardwarekey}}(}
+\DoxyCodeLine{00102\ \ \ \ \ \_In\_\ \ \ \ PWSTR\ \ \ \ \ \ \ pdo\_name,}
+\DoxyCodeLine{00103\ \ \ \ \ \_In\_\ \ \ \ PWSTR\ \ \ \ \ \ \ com\_port,}
+\DoxyCodeLine{00104\ \ \ \ \ \_In\_\ \ \ \ WDFDEVICE\ \ \ device}
+\DoxyCodeLine{00105\ );}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00114\ EVT\_WDF\_DEVICE\_CONTEXT\_CLEANUP\ \mbox{\hyperlink{virtual__device_8h_a34464d828bace8709f24aaec0a0030ce}{evt\_device\_cleanup}};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00125\ ULONG}
+\DoxyCodeLine{00126\ \mbox{\hyperlink{virtual__device_8h_a0b4ca2cfa58c8b80c24bef4562c9e828}{get\_baudrate}}(}
+\DoxyCodeLine{00127\ \ \ \ \ \_In\_\ \ \ \ \mbox{\hyperlink{structvdevice__context}{p\_vdevice\_context\_t}}\ device\_context}
+\DoxyCodeLine{00128\ );}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00138\ VOID}
+\DoxyCodeLine{00139\ \mbox{\hyperlink{virtual__device_8h_a78afa0799d60791507c87453e91cf3d3}{set\_baudrate}}(}
+\DoxyCodeLine{00140\ \ \ \ \ \_In\_\ \ \ \ \mbox{\hyperlink{structvdevice__context}{p\_vdevice\_context\_t}}\ device\_context,}
+\DoxyCodeLine{00141\ \ \ \ \ \_In\_\ \ \ \ ULONG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ baudrate}
+\DoxyCodeLine{00142\ );}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00154\ ULONG*}
+\DoxyCodeLine{00155\ \mbox{\hyperlink{virtual__device_8h_a3e8ae1631d3fc897978469f79e4aa9b2}{get\_fifo\_control\_register\_ptr}}(}
+\DoxyCodeLine{00156\ \ \ \ \ \_In\_\ \ \ \ \mbox{\hyperlink{structvdevice__context}{p\_vdevice\_context\_t}}\ device\_context}
+\DoxyCodeLine{00157\ );}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00169\ ULONG*}
+\DoxyCodeLine{00170\ \mbox{\hyperlink{virtual__device_8h_a31a61a207706097a826cb9742229df1b}{get\_line\_control\_register\_ptr}}(}
+\DoxyCodeLine{00171\ \ \ \ \ \_In\_\ \ \ \ \mbox{\hyperlink{structvdevice__context}{p\_vdevice\_context\_t}}\ device\_context}
+\DoxyCodeLine{00172\ );}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{comment}{/*\ TODO:\ add\ more\ info\ about\ data\ mask.\ */}}
+\DoxyCodeLine{00183\ VOID}
+\DoxyCodeLine{00184\ \mbox{\hyperlink{virtual__device_8h_a0bfb5d586c8ffac8f1467f6f5188c26b}{set\_valid\_data\_mask}}(}
+\DoxyCodeLine{00185\ \ \ \ \ \_In\_\ \ \ \ \mbox{\hyperlink{structvdevice__context}{p\_vdevice\_context\_t}}\ device\_context,}
+\DoxyCodeLine{00186\ \ \ \ \ \_In\_\ \ \ \ UCHAR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mask}
+\DoxyCodeLine{00187\ );}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00197\ VOID}
+\DoxyCodeLine{00198\ \mbox{\hyperlink{virtual__device_8h_adc34c18d00742087ee455007a75264fd}{set\_timeouts}}(}
+\DoxyCodeLine{00199\ \ \ \ \ \_In\_\ \ \ \ \mbox{\hyperlink{structvdevice__context}{p\_vdevice\_context\_t}}\ device\_context,}
+\DoxyCodeLine{00200\ \ \ \ \ \_In\_\ \ \ \ \mbox{\hyperlink{structserial__timeouts}{serial\_timeouts\_t}}\ \ \ \ \ timeouts}
+\DoxyCodeLine{00201\ );}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00211\ VOID}
+\DoxyCodeLine{00212\ \mbox{\hyperlink{virtual__device_8h_a01292a0b5b23d5fab5d56b4cb74ed4b7}{get\_timeouts}}(}
+\DoxyCodeLine{00213\ \ \ \ \ \_In\_\ \ \ \ \mbox{\hyperlink{structvdevice__context}{p\_vdevice\_context\_t}}\ device\_context,}
+\DoxyCodeLine{00214\ \ \ \ \ \_Out\_\ \ \ \mbox{\hyperlink{structserial__timeouts}{serial\_timeouts\_t}}*\ \ timeouts}
+\DoxyCodeLine{00215\ );}
+
+\end{DoxyCode}

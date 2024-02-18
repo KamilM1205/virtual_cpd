@@ -1,0 +1,63 @@
+\doxysection{vdevice\+\_\+context Struct Reference}
+\hypertarget{structvdevice__context}{}\label{structvdevice__context}\index{vdevice\_context@{vdevice\_context}}
+
+
+Struct that contains device parameters.  
+
+
+
+
+{\ttfamily \#include $<$virtual\+\_\+device.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+WDFDEVICE \mbox{\hyperlink{structvdevice__context_ad6edc8112bbc42368104f334b33ef5eb}{device}}
+\begin{DoxyCompactList}\small\item\em A handle of device object. \end{DoxyCompactList}\item 
+ULONG \mbox{\hyperlink{structvdevice__context_adff82fde8d265b16e74ee5756d420713}{baudrate}}
+\begin{DoxyCompactList}\small\item\em Baud rate. Not using. \end{DoxyCompactList}\item 
+PWSTR \mbox{\hyperlink{structvdevice__context_a22f4c7b96e7c875023f584b587ace92c}{pdo\+\_\+name}}
+\begin{DoxyCompactList}\small\item\em Physical device object name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct that contains device parameters. 
+
+Virtual device context -\/ struct that contains virtual device params and data. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structvdevice__context_adff82fde8d265b16e74ee5756d420713}\label{structvdevice__context_adff82fde8d265b16e74ee5756d420713} 
+\index{vdevice\_context@{vdevice\_context}!baudrate@{baudrate}}
+\index{baudrate@{baudrate}!vdevice\_context@{vdevice\_context}}
+\doxysubsubsection{\texorpdfstring{baudrate}{baudrate}}
+{\footnotesize\ttfamily ULONG vdevice\+\_\+context\+::baudrate}
+
+
+
+Baud rate. Not using. 
+
+Not using. Need only to emulation. \Hypertarget{structvdevice__context_ad6edc8112bbc42368104f334b33ef5eb}\label{structvdevice__context_ad6edc8112bbc42368104f334b33ef5eb} 
+\index{vdevice\_context@{vdevice\_context}!device@{device}}
+\index{device@{device}!vdevice\_context@{vdevice\_context}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily WDFDEVICE vdevice\+\_\+context\+::device}
+
+
+
+A handle of device object. 
+
+It\textquotesingle{}s a handle to a device object. \Hypertarget{structvdevice__context_a22f4c7b96e7c875023f584b587ace92c}\label{structvdevice__context_a22f4c7b96e7c875023f584b587ace92c} 
+\index{vdevice\_context@{vdevice\_context}!pdo\_name@{pdo\_name}}
+\index{pdo\_name@{pdo\_name}!vdevice\_context@{vdevice\_context}}
+\doxysubsubsection{\texorpdfstring{pdo\_name}{pdo\_name}}
+{\footnotesize\ttfamily PWSTR vdevice\+\_\+context\+::pdo\+\_\+name}
+
+
+
+Physical device object name. 
+
+Represents phycical device name(\+It seems like a device ID). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{virtual__device_8h}{virtual\+\_\+device.\+h}}\end{DoxyCompactItemize}
